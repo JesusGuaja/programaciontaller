@@ -1,12 +1,11 @@
-import Cliente from "./cliente.js"
+import Pitagoras from "./pitagoras.js"
 
 function ejecutar() {
-    let nombre = document.getElementById("nombre").value;
-    let apellido = document.getElementById("apellido").value;
-    let dni = document.getElementById("dni").value;
+    let opuesto = document.getElementById("opuesto").value;
+    let adyasente = document.getElementById("adyasente").value;
   
-    let cliente = new Cliente(nombre,apellido,dni);
-    cliente.mostrar_datos_personales()
+    let pitagoras = new Pitagoras(opuesto, adyasente);
+    pitagoras.mostrar_resultado()
 }
 
 document.getElementById("aceptar").addEventListener("click", ejecutar);
