@@ -24,3 +24,7 @@ console.log(lenguajes);
 
 //agregar un elemento al inicio de un arreglo
 lenguajes.unshift('C#'); 
+console.log(lenguajes);
+
+//como eliminar el primero elemento de un arreglo
+lenguajes.shift();
