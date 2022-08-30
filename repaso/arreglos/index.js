@@ -21,3 +21,6 @@ console.log(lenguajes);
 //como eliminar el ultimo elemento del arreglo
 lenguajes.pop();
 console.log(lenguajes);
+
+//agregar un elemento al inicio de un arreglo
+lenguajes.unshift('C#'); 
