@@ -1,13 +1,7 @@
 export default class Ventas {
-    constructor(){
 
-    }
-
-    async consumir_api() {
-        const productos = await fetch('https://fakestoreapi.com/products');
-        const productos_definitivos = await productos.json();
-    
-        let productos_totales = []
+    constructor(productos_definitivos){
+        this.productos_totales = []
         productos_definitivos.forEach( (element) => {
             
             let item = `
@@ -22,10 +16,14 @@ export default class Ventas {
             </div>
             </div>
             `
-            productos_totales.push(item);
+            this.productos_totales.push(item);
         });
 
-        document.getElementById("inc_columnas").innerHTML = productos_totales.join('');
+        
+    }
+
+    enviar() {
+        document.getElementById("cuerpo").innerHTML = this.productos_totales.join('');
     }
 
 }

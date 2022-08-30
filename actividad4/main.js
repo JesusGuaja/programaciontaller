@@ -1,10 +1,13 @@
 import Ventas from "./ventas.js"
 
-function ventas() {
+const ventas = async () => {
 
-    let ventas = new Ventas()
-    ventas.consumir_api()
+    const productos = await fetch(`https://fakestoreapi.com/products${document.getElementById("slt_operar").value}`);
+    const productos_definitivos = await productos.json();
+
+    let ventas = new Ventas(productos_definitivos);
+    ventas.enviar()
 }
 
-ventas();
+document.getElementById("slt_operar").addEventListener("change", ventas);
 
