@@ -47,3 +47,4 @@ function imprimir_lista() {
 }
 
 document.getElementById("lista_btn").addEventListener("click", imprimir_lista);
+
